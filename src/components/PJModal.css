@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+.PJModal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    color: #fff;
+}
+.PJModal .modal_wrap{
+    position: relative;
+    width: 60%;
+    height: 80%;
+    margin: 130px auto 0 auto;
+    padding: 30px;
+    background-color: #1B1D29;
+    overflow-y: auto;
+}
+.PJModal .modal_content{
+    padding: 0 8%;
+}
+.PJModal .modal_content .pj_con_main{
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.PJModal .modal_wrap .pj_con_head p{
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+}
+.PJModal .modal_wrap p.pj_modal_title{
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.8;
+    color: white;
+}
+.PJModal .modal_wrap .pj_close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+}
+.PJModal .pj_photo{
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.PJModal .pj_photo img{
+    width: 100%;
+    height: auto;
+}
+.PJModal .pj_photo_responsive{
+    display: flex;
+    justify-content: space-between;
+}
+.PJModal .photo_mo{
+    width: 30%;
+    height: auto;
+    padding-right: 15px;
+}
+.PJModal .photo_mo img{
+    width: 100%;
+    height: auto;
+}
+.PJModal .photo_ta{
+    width: 70%;
+    height: auto;
+}
+.PJModal .photo_ta img{
+    width: 100%;
+    height: auto;
+}
+.PJModal .pj_con_main{
+    font-size: 16px ;
+    font-weight: 700;
+}
+.PJModal .pj_con_main p{
+    margin-bottom: 5px;
+}

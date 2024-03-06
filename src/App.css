@@ -19,21 +19,463 @@
         height: 0vh;
     }
 }
-
+@keyframes wave {
+    0%, 100%{
+        clip-path: polygon(0 45%, 15% 43%, 29% 50%, 54% 60%, 67% 64%, 81% 59%, 100% 51%, 100% 100%, 0 100%);
+    }
+    50%{
+        clip-path: polygon(0 50%, 14% 58%, 31% 64%, 53% 62%, 69% 50%, 86% 44%, 100% 45%, 100% 100%, 0 100%);
+    }
+    
+}
 /* 공통 */
+
 *{
     padding: 0;
     margin: 0;
 }
+a{
+    color: #333;
+}
+.pc{
+    display: none;
+}
+.App{
+    position: relative;
+}
+.sc-aXZVg{
+    position: relative;
+    /* z-index: -1; */
+}
+.page_title{
+    text-align: center;
+}
 .page_title h2{
-    padding-top: 175px;
+    padding-top: 95px;
+    margin-bottom: 80px;
+}
+
+/* Home - 375px */
+.Home{
+    position: relative;
+    height: 100vh;
+    z-index: -1;
+}
+.Home .main_title{
+    position: absolute;
+    top: 35%;
+    padding:0 20px;
+    z-index: -1;
+}
+.Home .title_position h1{
+    font-size: 2.5em;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+.Home .main_title h2{
+    font-weight: 600;
+    font-size: 1.2em;
+}
+.Home .home_background > p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: aquamarine;
+    z-index: -1;
+    animation: wave 4s ease-in-out infinite;
+}
+/* .Home .home_background  p img{
+    width: 100%;
+    height: auto;
+} */
+
+/* About -375px */
+.About{
+    position: relative;
+    text-align: center;
+    margin-top: 84px;
+    z-index: -1;
+}
+.About .content h2{
+    margin-bottom: 44px;
+    font-size: 20px;
+}
+.About .content h3{
+    padding: 0 70px;
+    margin-bottom: 50px;
+    font-size: 14px;
+}
+.About .circle{
+    width: 100%;
+    margin: 0 auto;
+}
+.About .circle > div{
+    display: flex;
+    text-align: center;
+}
+.About .circle p{
+    position: relative;
+    width: 33.33%;
+    height: auto;
+    aspect-ratio: 1;
+    margin: 0 5px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    /* background-color: aqua; */
+}
+.About .circle img{
+    width: 100%;
+    height: auto;
+}
+.About .circle span{
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+    font-size: 18px;
+    font-weight: 700;
+
+}
+
+/* Skill - 375px */
+.Skill{
+    position: relative;
+    height: 100vh;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 99;
+}
+.skill_wrap{
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 18%;
+    height: auto;
+    aspect-ratio: 1;
+    padding: 3%;
+}
+.skill_wrap p{
+    width: 50%;
+    height: 100%;
+    padding-top: 30%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.skill_wrap img{
+    width: 100%;
+    height: auto;
+    padding: 0 2px;
+    box-sizing: border-box;
+}
+.skill_wrap .film{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    background-color: rgba(147, 230, 229, 0.8);
+    cursor: pointer;
+    /* width: 100%;
+    height: 100%; */
+}
+.Skill .skill_wrap.bubble_moving{
+    animation: floatAnimation 3s infinite;
+}
+.skill_wrap.bubble01{
+    left: 0;
+    top: 17%;
+    margin-left: 18%;
+    animation-delay: 0.8s;
+}
+.skill_wrap.bubble02{
+    right: 0;
+    top: 27%;
+    margin-right: 8%;
+}
+.skill_wrap.bubble03{
+    right: 0;
+    top: 45%;
+    margin-right: 35%;
+    animation-delay: 0.5s;
+}
+.skill_wrap.bubble04{
+    left: 0;
+    top: 57%;
+    margin-left: 10%;
+    text-align: center;
+}
+.skill_wrap.bubble04 p{
+    margin: 0 auto;
+}
+.skill_wrap.bubble05{
+    right: 0;
+    top: 70%;
+    margin-right: 5%;
+    animation-delay: 1s;
+}
+.skill_wrap.bubble06{
+    right: 0;
+    top: 80%;
+    margin-right: 45%;
+}
+/* .Skill .skill_wrap{
+    position: absolute;
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+}
+.Skill .skill_wrap.bubble_moving{
+    animation: floatAnimation 3s infinite;
+}
+.Skill .skill_wrap.bubble01{
+    top: 157px;
+    padding-left: 80px;
+    width: 15%;
+    animation-delay: 0.8s;
+}
+
+
+.Skill .skill_wrap .skill_icon{
+    display: flex;
+    justify-content: center;
+    padding-top: 30%;
+}
+.Skill .skill_wrap.bubble03 .skill_icon{
+    flex-direction: column;
+    align-items: center;
+}
+.Skill .skill_wrap .sk_icon p{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+.Skill .skill_wrap .sk_icon img{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0 5px;
+}
+.Skill .skill_wrap .bubble_film{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgba(147, 230, 229, 0.8);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.Skill .skill_wrap .bubble_film::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 17%;
+    right: 17%;
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    background-color: #fff;
+} */
+
+/* Project - 375px */
+.project_wrap.mo{
+    height: auto;
+}
+.project_wrap.mo > ul{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.project_wrap.mo .pj_card{
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 1.2em;
+    /* background-color: lightcyan; */
+}
+.project_wrap.mo > ul > li{
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+.project_wrap.mo .pj_photo{
+    position: relative;
+    margin-bottom: 20px;
+}
+.project_wrap.mo .pj_photo button{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-left: -26px;
+    padding: 2px 5px 7px 5px;
+    font-size: 1.4em;
+    border-radius: 50px;
+    color: #fff;
+    background-color: rgb(41, 121, 121);
+    opacity: 0;
+}
+.project_wrap.mo > ul > li:hover button{
+    opacity: 1;
+}
+.project_wrap.mo li img{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+
+}
+.project_wrap.mo .pj_title h2{
+    font-size: 1.4em;
+    line-height: 1;
+    margin-bottom: 10px;
+    /* font-weight: 600; */
+}
+.project_wrap.mo .pj_txt li{
+    display: flex;
+}
+.project_wrap.mo .pj_txt p:first-child{
+    font-weight: 600;
+    margin-right: 5px;
+}
+.project_wrap.mo .pj_txt p:last-child{
+    font-size: 12px;
+}
+/* Contact - 375px */
+
+.Contact{
+    position: relative;
+    height: 100vh;
+}
+.Contact .bg_underwater{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -4;
+}
+.Contact .bg_underwater img{
+    width: 100%;
+    height: auto;
+}
+.Contact .contact_cards{
+    /* display: flex; */
+    width: 60%;
+    max-width: 1220px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    
+}
+.Contact .contact_cards > div{
+    width: 100%;
+    height: 500px;
+    margin: 0 15px;
+    box-sizing: border-box;
+    background-color: lightgoldenrodyellow;
+    border-radius: 1.2em;
+    border: 1px solid #333;
+}
+.Contact .contact_cards .info_photo{
+    width: 100%;
+    height: 260px;
+    padding: 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.Contact .contact_cards .info_photo img{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
+.Contact .contact_cards .info_txt{
+    padding: 20px;
+    display: flex;
+}
+.Contact .info_icon{
+    margin-right: 15px;
+    object-fit: contain; 
+}
+.Contact .info_icon li{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 15px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    text-indent: -9999px;
+}
+.Contact .info_icon .user{
+    background-image: url(../public/img/icon_user.png);
+}
+.Contact .info_icon .cake{
+    background-image: url(../public/img/icon_cake.png);
+}
+.Contact .info_icon .phone{
+    background-image: url(../public/img/icon_phone.png);
+}
+.Contact .info_icon .email{
+    background-image: url(../public/img/icon_email.png);
+}
+.Contact .info_me{
+    margin-top: 10px;
+}
+.Contact .info_me li{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.Contact .contact_email{
+    padding: 30px;
+    text-align: center;
+    
+}
+.Contact .contact_email form p{
+    margin-bottom: 15px;
+}
+.Contact .contact_email form input{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 15px;
+}
+.Contact .contact_email form textarea{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+}
+.Contact .contact_email form button{
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    height: 45px;
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 1024px) {
+    
+/* 공통 - 1024 */
+/* section{
+    z-index: 10;
+} */
+.pc{
+    display: block;
+}
+.mo{
+    display: none;
+}
+.page_title h2{
+    padding-top: 150px;
+    margin-bottom: 50px;
     text-align: center;
     line-height: 1;
     font-size: 40px;
 }
-/* .drop_water::after{
-} */
-
 .drop_water img{
     display: none;
 }
@@ -54,10 +496,6 @@
 }
 
 /* Home */
-.Home{
-    position: relative;
-    height: 100vh;
-}
 .Home .main_title{
     position: absolute;
     top: 205px;
@@ -65,23 +503,12 @@
     line-height: 1;
 }
 .Home .main_title .title_position h1{
-    font-size: 128px;
-    font-weight: 500;
+    font-size: 7em;
+    font-weight: 700;
 }
 .Home .main_title .title_name{
-    font-size: 64px;
-    font-weight: 400;
-}
-.Home .home_background > p{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-}
-.Home .home_background  p img{
-    width: 100%;
-    height: auto;
+    font-size: 3em;
+    font-weight: 600;
 }
 
 /* About */
@@ -90,9 +517,6 @@
     height: 100vh;
     margin: 0 auto;
     text-align: center;
-}
-.About .drop_wather{
-    /* bottom: 100px; */
 }
 .About .about_txt{
     text-align: center;
@@ -116,156 +540,50 @@
     font-size: 30px;
     font-weight: 400;
 }
-.About .circle{
-    width: 70%;
-    margin: 0 auto;
-}
-.About .circle > div{
-    display: flex;
-    text-align: center;
-}
-.About .circle p{
-    width: 33.33%;
-    height: auto;
-    aspect-ratio: 1;
-    margin: 0 45px;
-    border-radius: 50%;
-    box-sizing: border-box;
-    background-color: aqua;
-}
 
 /* Skill */
-.Skill{
-    position: relative;
-    height: 100vh;
-}
-.Skill .skill_bubble{
-    position: absolute;
-    border-radius: 50%;
-}
-.Skill .skill_bubble.bubble01{
+.Skill .skill_wrap.bubble01{
     top: 323px;
     left: 516px;
     width: 15%;
-    height: auto;
-    aspect-ratio: 1;
-    animation: floatAnimation 3s infinite;
     animation-delay: 0.8s;
 }
-.Skill .skill_bubble.bubble02{
+.Skill .skill_wrap.bubble02{
     top: 551px;
     left: 761px;
     width: 15%;
     height: auto;
     aspect-ratio: 1;
-    animation: floatAnimation 7s infinite;
 }
-.Skill .skill_bubble.bubble03{
+.Skill .skill_wrap.bubble03{
     top: 333px;
     left: 1075px;
     width: 15%;
     height: auto;
     aspect-ratio: 1;
-    animation: floatAnimation 5s infinite;
     animation-delay: 0.5s;
 }
-.Skill .skill_bubble.bubble04{
+.Skill .skill_wrap.bubble04{
     top: 652px;
     left: 502px;
     width: 15%;
     height: auto;
     aspect-ratio: 1;
-    animation: floatAnimation 4s infinite;
 }
-.Skill .skill_bubble.bubble05{
+.Skill .skill_wrap.bubble05{
     top: 643px;
     left: 1231px;
     width: 15%;
     height: auto;
     aspect-ratio: 1;
-    animation: floatAnimation 3s infinite;
     animation-delay: 1s;
 }
-.Skill .skill_bubble.bubble06{
+.Skill .skill_wrap.bubble06{
     top: 822px;
     left: 972px;
     width: 15%;
     height: auto;
     aspect-ratio: 1;
-    animation: floatAnimation 5s infinite;
-}
-.Skill .skill_bubble .skill_icon{
-    display: flex;
-    justify-content: center;
-    padding-top: 30%;
-}
-.Skill .skill_bubble.bubble03 .skill_icon{
-    flex-direction: column;
-    align-items: center;
-}
-.Skill .skill_bubble .sk_icon{
-    width: 80px;
-    height: 80px;
-    background-image: url(../public/img/pofol_sprites.png);
-}
-.Skill .skill_bubble .sk_icon{
-    margin: 5px;
-}
-.Skill .skill_bubble .bubble_film{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(147, 230, 229, 0.8);
-    border-radius: 50%;
-    cursor: pointer;
-}
-.Skill .skill_bubble .bubble_film::after{
-    content: "";
-    display: block;
-    position: absolute;
-    top: 17%;
-    right: 17%;
-    width: 10%;
-    height: 10%;
-    border-radius: 50%;
-    background-color: #fff;
-}
-.Skill .skill_bubble .html{
-    background-position: -23px -21px;
-}
-.Skill .skill_bubble .css{
-    background-position: -105px -21px;
-}
-.Skill .skill_bubble .js{
-    background-position: -23px -222px;
-}
-.Skill .skill_bubble .ts{
-    background-position: -121px -222px;
-}
-.Skill .skill_bubble .jq{
-    width: 205px;
-    height: 50px;
-    background-position: -127px -314px;
-}
-.Skill .skill_bubble .react{
-    width: 90px;
-    background-position: -23px -314px;
-}
-.Skill .skill_bubble .node{
-    width: 131px;
-    background-position: -232px -220px;
-}
-.Skill .skill_bubble .ps{
-    background-position: -23px -126px;
-}
-.Skill .skill_bubble .figma{
-    width: 54px;
-    background-position: -232px -126px;
-}
-.Skill .skill_bubble .gh{
-    background-position: -121px -126px;
 }
 
 /* ProjectList */
@@ -273,21 +591,20 @@
     position: relative;
     max-width: 1360px;
     margin: 0 auto;
-    height: 100vh;
 }
 .slick-slide{
-    padding: 0 3vw;
+    padding: 0 5vw;
     text-align: center;
     box-sizing: border-box;
 }
 .project_card{
-    width: 390px;
-    height: 565px;
+    width: 33.33%;
+    height: auto;
+    aspect-ratio: 3/4;
     /* border-radius: 3%; */
     border-radius: 5px;
     padding: 20px;
     box-sizing: border-box;
-    background-color: lightblue;
     border: 1px solid #333;
     
 }
@@ -315,19 +632,32 @@
 .card_right{
     text-align: left;
 }
-.ProjectList .project_wrap  ul{
+.ProjectList .project_wrap ul{
     display: flex !important;
     padding: 0 20px;
     width: 50%;
+    margin-left: 40%;
+    justify-content: right;
+    text-align: right;
     height: auto;
-    margin: 0 auto;
 }
-.project_wrap .slick-dots button{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: rgb(21, 99, 99);
-    text-indent: -999px;
+.project_wrap ul.slick-dots{
+    text-align: right;
+    justify-content: right;
+
+}
+.project_wrap ul.slick-dots button{
+    width: 50px;
+    height: 10px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: rgb(226, 237, 237);
+    text-indent: -9999px;
+}
+.project_wrap ul.slick-dots li.slick-active button{ 
+    background-color: rgb(112, 154, 154);
+    
 }
 .slick-arrow.slick-prev{
     position: absolute;
@@ -335,12 +665,14 @@
     left: 20px;
     width: 45px;
     height: 50px;
+    margin-top: -25px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
     text-indent: -9999px;
     background-image: url(../public/img/arrow_prev.png);
     z-index: 10;
+    opacity: 0.8;
 }
 .slick-arrow.slick-next{
     position: absolute;
@@ -348,6 +680,7 @@
     right: 20px;
     width: 45px;
     height: 50px;
+    margin-top: -25px;
     transform: rotate(180deg);
     background-repeat: no-repeat;
     background-position: center;
@@ -355,28 +688,13 @@
     text-indent: 9999px;
     background-image: url(../public/img/arrow_prev.png);
     z-index: 10;
+    opacity: 0.8;
 }
 
-/* PJModal */
-.PJModal .modal_bg{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #111;
-    opacity: 0.7;
-    z-index: 20;
-}
-.PJModal .modal{
-    padding: 20px 60px;
-    max-width: 1200px;
-    background-color: #1B1D29;
-}
 
 /* Contact */
 .Contact{
-    position: relative;
+    /* position: relative; */
     height: 100vh;
 }
 .Contact .bg_underwater{
@@ -394,14 +712,91 @@
     display: flex;
     max-width: 1220px;
     margin: 0 auto;
+    padding: 0 150px;
+    box-sizing: border-box;
     
 }
 .Contact .contact_cards > div{
-    width: 50%;
-    height: auto;
-    aspect-ratio: 3/4;
+    /* width: 50%; */
+    height: 500px;
     margin: 0 15px;
     box-sizing: border-box;
     background-color: lightgoldenrodyellow;
     border: 1px solid #333;
+}
+.Contact .contact_cards .info_photo{
+    width: 100%;
+    height: 260px;
+    padding: 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.Contact .contact_cards .info_photo img{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
+.Contact .contact_cards .info_txt{
+    padding: 20px;
+    display: flex;
+}
+.Contact .info_icon{
+    margin-right: 15px;
+    object-fit: contain; 
+}
+.Contact .info_icon li{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 15px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    text-indent: -9999px;
+}
+.Contact .info_icon .user{
+    background-image: url(../public/img/icon_user.png);
+}
+.Contact .info_icon .cake{
+    background-image: url(../public/img/icon_cake.png);
+}
+.Contact .info_icon .phone{
+    background-image: url(../public/img/icon_phone.png);
+}
+.Contact .info_icon .email{
+    background-image: url(../public/img/icon_email.png);
+}
+.Contact .info_me{
+    margin-top: 10px;
+}
+.Contact .info_me li{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.Contact .contact_email{
+    padding: 30px;
+    text-align: center;
+    
+}
+.Contact .contact_email form p{
+    margin-bottom: 15px;
+}
+.Contact .contact_email form input{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 15px;
+}
+.Contact .contact_email form textarea{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+}
+.Contact .contact_email form button{
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    height: 45px;
+}
+
 }

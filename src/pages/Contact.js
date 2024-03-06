@@ -3,25 +3,31 @@ import Header from "../components/Header";
 
 const Contact = () => {
     return(
-        <div className="Contact">
-            <Header />    
-            <DropWater />
+        <section className="Contact" id="Contact"> 
+        
+        <div>
+                <div className="page_title">
+                    <h2>CONTACT</h2>
+                </div>
+            </div>
+            {/* <DropWater /> */}
             <div className="bg_underwater">
                 <img src="/img/bottom_wave.png" />
             </div>
             <div className="contact_cards">
                 <div className="contact_info">
-                    <p>
-                        <img />
+                    <p className="info_photo">
+                        <img src="/img/8.png" />
                     </p>
-                    <div>
-                        <ul>
-                            <li>imo</li>
-                            <li>imo</li>
-                            <li>imo</li>
-                            <li>imo</li>
+                    <div className="info_txt">
+                        <ul className="info_icon
+                        ">
+                            <li className="user">imo</li>
+                            <li className="cake">imo</li>
+                            <li className="phone">imo</li>
+                            <li className="email">imo</li>
                         </ul>
-                        <ul>
+                        <ul className="info_me">
                             <li>이가영</li>
                             <li>2000.02.17</li>
                             <li>010-2653-4617</li>
@@ -29,12 +35,10 @@ const Contact = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="contact_email">
+                {/* <div className="contact_email">
                     <form>
                         <p>
                             <input type="text" />
-                        </p>
-                        <p>
                             <input type="text" />
                         </p>
                         <p>
@@ -42,10 +46,9 @@ const Contact = () => {
                         </p>
                         <p><button>Send</button></p>
                     </form>
-                </div>
+                </div> */}
             </div>
-            Contact
-        </div>
+        </section>
     )
 };
 

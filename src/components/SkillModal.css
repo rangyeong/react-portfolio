@@ -1,0 +1,93 @@
+  @charset "utf-8";
+
+  
+/* SkillModal */
+.Skill .skill_modal{
+    position: absolute;
+    top: 30%;
+    right: 0;
+    z-index: 30;
+}
+.Skill .skill_modal::before{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    /* border-top-color: #1B1D29; */
+
+}
+.Skill .modal_before{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: palevioletred; */
+    z-index: 10;
+
+}
+.Skill .skill_modal.modal01{ 
+    margin-right: -170px;
+}
+.Skill .skill_modal.modal01::before{
+    margin-left: -28px;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 20px solid #1B1D29;
+}
+.Skill .skill_modal.modal02{ 
+    margin-right: -170px;
+}
+.Skill .skill_modal.modal02::before{
+    margin-left: -28px;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 20px solid #1B1D29;
+}
+.Skill .skill_modal.modal03{ 
+    margin-right: 350px;
+}
+.Skill .skill_modal.modal03::before{
+    margin-left: 120px;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-left: 20px solid #1B1D29;
+}
+.Skill .skill_modal.modal04{ 
+    margin-right: -170px;
+}
+.Skill .skill_modal.modal04::before{
+    margin-left: -28px;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 20px solid #1B1D29;
+}
+.Skill .skill_modal.modal05{ 
+    margin-right: 350px;
+}
+.Skill .skill_modal.modal05::before{
+    margin-left: 120px;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-left: 20px solid #1B1D29;
+}
+.Skill .skill_modal.modal06{ 
+    margin-right: 300px;
+}
+.Skill .skill_modal.modal06::before{
+    margin-left: 120px;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-left: 20px solid #1B1D29;
+}
